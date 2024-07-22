@@ -2,6 +2,7 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import MainHome from "./MainHome";
 import StudentHome from "./StudentHome";
+import StudentDone from "./StudentDone";
 import InstructorHome from "./InstructorHome";
 import InstructorAttendance from "./InstructorAttendance";
 import InstructorDone from "./InstructorDone";
@@ -18,6 +19,7 @@ function App() {
           element={<InstructorAttendance />}
         />
         <Route path="/InstructorDone" element={<InstructorDone />} />
+        <Route path="/StudentDone" element={<StudentDone />} />
       </Routes>
     </Router>
   );
