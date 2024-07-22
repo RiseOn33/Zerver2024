@@ -6,6 +6,7 @@ function StudentHome() {
   const webcamRef = useRef(null);
   const [scanResults, setScanResults] = useState([]);
   const [error, setError] = useState("");
+  const [zoom, setZoom] = useState(1);
 
   useEffect(() => {
     checkPermissions();
@@ -70,20 +71,42 @@ function StudentHome() {
   };
 
   return (
-    <div style={{ position: "relative" }}>
+    <div style={{ position: "relative", textAlign: "center" }}>
       {error ? (
         <div className="error">{error}</div>
       ) : (
-        <Webcam
-          className="webcam"
-          audio={false}
-          ref={webcamRef}
-          screenshotFormat="image/jpeg"
-          videoConstraints={{
-            facingMode:
-              window.innerWidth < 768 ? { exact: "environment" } : "user",
-          }}
-        />
+        <div style={{ position: "relative", display: "inline-block" }}>
+          <Webcam
+            className="webcam"
+            audio={false}
+            ref={webcamRef}
+            screenshotFormat="image/jpeg"
+            videoConstraints={{
+              facingMode:
+                window.innerWidth < 768 ? { exact: "environment" } : "user",
+            }}
+            style={{
+              transform: `scale(${zoom})`,
+              transformOrigin: "center center",
+              width: "100%",
+              height: "auto",
+            }}
+          />
+          <input
+            type="range"
+            min="1"
+            max="5"
+            step="0.1"
+            value={zoom}
+            onChange={(e) => setZoom(parseFloat(e.target.value))}
+            style={{
+              width: "80%",
+              position: "absolute",
+              bottom: "10px",
+              left: "10%",
+            }}
+          />
+        </div>
       )}
       <div>
         {scanResults.map((result, index) => (
