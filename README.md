@@ -34,4 +34,11 @@ Make sure you have the following installed:
    npm start
    ```
 
+### Closing the Application
+
+1. **Ending the Development Server**
+   CTRL + C
+
+*Remember, while updating code, no need to close and re-run the application to see changes. Save the code in the IDE and it will update to the webpage.*
+
 That is everything you need to know to get this project up and running!
