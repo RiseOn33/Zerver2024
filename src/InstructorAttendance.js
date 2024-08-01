@@ -86,7 +86,7 @@ function InstructorAttendance() {
 export default InstructorAttendance;
 
 // // URL of the API endpoint -- code for pulling from a qr code
-// const apiUrl = "http://10.100.178.140:5000/items";
+// const apiUrl = "http://"IP ADDRESS:PORT"/items";
 
 // useEffect(() => {
 //   async function fetchData() {
