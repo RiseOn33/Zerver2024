@@ -36,8 +36,8 @@ Make sure you have the following installed:
 
 ### Closing the Application
 
-1. **Ending the Development Server**
-   CTRL + C
+1. **Ending the Development Server:**
+   In the terminal, press *CTRL + C* to terminate the server.
 
 *Remember, while updating code, no need to close and re-run the application to see changes. Save the code in the IDE and it will update to the webpage.*
 
