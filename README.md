@@ -13,7 +13,7 @@ Make sure you have the following installed:
 1. **Clone the repository:**
 
    ```bash
-   git clone <https://github.com/RiseOn33/my_app>
+   git clone <https://github.com/RiseOn33/Zerver2024>
    ```
 
 2. **Navigate to project directory:**
